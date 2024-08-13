@@ -35,4 +35,34 @@ window.addEventListener("load", function () {
         `;
     });
 
+    document.getElementById('modificar-odontologo').addEventListener('click', function () {
+        document.querySelector('main').innerHTML = `
+            <div class="card">
+                <h1>Modificar Odontólogo</h1>
+                <form id="modificar-odontologo-form">
+                    <div>
+                        <label for="id">ID del Odontólogo:</label>
+                        <input type="text" id="id" name="id" required>
+                    </div>
+                    <div>
+                        <label for="campo">Campo a Modificar:</label>
+                        <select id="campo" name="campo" required>
+                            <option value="apellido">Apellido</option>
+                            <option value="nombre">Nombre</option>
+                            <option value="matricula">Matrícula</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="nuevo-dato">Nuevo Valor:</label>
+                        <input type="text" id="nuevo-dato" name="nuevo-dato" required>
+                    </div>
+                    <div>
+                        <button type="submit">Modificar</button>
+                    </div>
+                </form>
+            </div>
+        `;
+    });
+    
+
 });
